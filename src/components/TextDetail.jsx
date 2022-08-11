@@ -4,7 +4,8 @@ import axios from "axios";
 
 import CommentList from "./CommentList";
 import AddComment from "./AddComment";
-const TextDetail = (props) => {
+import TextDetailHeader from "./TextDetailHeader";
+const TextDetail = () => {
   const INITIALCOMMENT = {
     display_name: "",
     body: "",
@@ -54,7 +55,7 @@ const TextDetail = (props) => {
 
   return (
     <>
-      <TextDetail textDetail={textDetail} />
+      <TextDetailHeader textDetail={textDetail} />
       <CommentList comments={comments} />
       <AddComment
         comment={comment}
